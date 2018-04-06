@@ -1,18 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/black"
-        android:orientation="vertical">
+        android:background="@color/playword_bule">
+
+        <ImageView
+            android:id="@+id/splash_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="107.7sp"
+            android:src="@drawable/playword_main_logo"
+            tools:ignore="ContentDescription" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:id="@+id/splash_copyright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="4.3sp"
+            android:text="@string/copyright"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/splash_progress_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/splash_copyright"
+            android:layout_below="@id/splash_logo"
+            android:layout_centerHorizontal="true"
             android:gravity="center"
-            android:text="SplashActivity"
-            android:textColor="@color/white"
-            android:textSize="50sp" />
-    </LinearLayout>
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/splash_progress"
+                android:layout_width="79.3sp"
+                android:layout_height="79.8sp"
+                android:layout_gravity="center"
+                android:indeterminateDrawable="@drawable/style_splash_progress" />
+
+            <TextView
+                android:id="@+id/splash_progress_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/splash_loading"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
 </layout>
