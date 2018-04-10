@@ -10,6 +10,12 @@ import kr.owens.playword.R;
 import kr.owens.playword.databinding.ActivitySplashBinding;
 import kr.owens.playword.ui.MainActivity;
 
+/**
+ * show splash & app loading
+ * Launch Activity
+ *
+ * @author owen151128
+ */
 public class SplashActivity extends AppCompatActivity {
 
     private ActivitySplashBinding binding;
