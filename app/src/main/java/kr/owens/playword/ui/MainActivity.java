@@ -5,6 +5,13 @@ import android.os.Bundle;
 
 import kr.owens.playword.R;
 
+/**
+ * MainActivity
+ * This Activity is not Launch activity
+ * Main Display Activity
+ *
+ * @author owen151128
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
